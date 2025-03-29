@@ -1,6 +1,39 @@
 # `Market Analysis`
 - This repository contains SQL queries and analysis on an e-commerce grocery dataset, covering ordering patterns, product distribution, and user behavior. Explore insights on top products, reorder trends, and shopping habits. 🚀
 
+
+## Attributes Information
+
+### 1. Aisles Dataset:
+- `aisle_id`: Unique identifier for the aisle. (Primary Key)
+- `aisle`: Name of the aisle.
+
+### 2. Departments Dataset:
+- `department_id`: Unique identifier for the department. (Primary Key)
+- `department`: Name of the department.
+
+### 3. Order Products Prior Dataset:
+- `order_id`: Unique identifier for the order. (Primary Key)
+- `product_id`: Unique identifier for the product.
+- `add_to_cart_order`: Order in which the product was added to the cart.
+- `reordered`: Indicates whether the product was reordered in this order (1 for reordered, 0 for not reordered).
+
+### 4. Orders Dataset:
+- `order_id`: Unique identifier for the order. (Primary Key)
+- `user_id`: Unique identifier for the user.
+- `eval_set`: Evaluation set (prior, train, test).
+- `order_number`: Order sequence number for the user.
+- `order_dow`: Day of the week the order was placed.
+- `order_hour_of_day`: Hour of the day the order was placed.
+- `days_since_prior_order`: Number of days since the last order.
+
+### 5. Products Dataset:
+- `product_id`: Unique identifier for the product.
+- `product_name`: Name of the product.
+- `aisle_id`: Identifier for the aisle the product belongs to. (Primary Key)
+- `department_id`: Identifier for the department the product belongs to.
+
+
 ## Task
 
 ```sql
@@ -211,50 +244,22 @@ group by a.aisle, d.department, a.aisle_id, d.department_id
 order by a.aisle_id, d.department_id;
 ```
 
-## Attributes Information
-
-### 1. Aisles Dataset:
-- `aisle_id`: Unique identifier for the aisle. (Primary Key)
-- `aisle`: Name of the aisle.
-
-### 2. Departments Dataset:
-- `department_id`: Unique identifier for the department. (Primary Key)
-- `department`: Name of the department.
-
-### 3. Order Products Prior Dataset:
-- `order_id`: Unique identifier for the order. (Primary Key)
-- `product_id`: Unique identifier for the product.
-- `add_to_cart_order`: Order in which the product was added to the cart.
-- `reordered`: Indicates whether the product was reordered in this order (1 for reordered, 0 for not reordered).
-
-### 4. Orders Dataset:
-- `order_id`: Unique identifier for the order. (Primary Key)
-- `user_id`: Unique identifier for the user.
-- `eval_set`: Evaluation set (prior, train, test).
-- `order_number`: Order sequence number for the user.
-- `order_dow`: Day of the week the order was placed.
-- `order_hour_of_day`: Hour of the day the order was placed.
-- `days_since_prior_order`: Number of days since the last order.
-
-### 5. Products Dataset:
-- `product_id`: Unique identifier for the product.
-- `product_name`: Name of the product.
-- `aisle_id`: Identifier for the aisle the product belongs to. (Primary Key)
-- `department_id`: Identifier for the department the product belongs to.
-
-# Market Analysis
-
-## Project Information
-- Project Team ID: PTID-CDA-FEB-25-346
-- Created by: Etisha Srivastava, DataMites
-- Project ID: CDACL-006
-
 ---
 
 ## Insights
 
 ### 1. Top 10 Aisles with the Highest Number of Products
-_(Data Pending)_
+- Missing
+- Candy Chocolate
+- Ice Cream Ice
+- Vitamins Supplements
+- Yogurt
+- Chips Pretzels
+- Packaged Cheese
+- Tea
+- Frozen Meals
+- Cookies Cakes
+
 
 ### 2. Unique Departments in the Dataset
 - There are 21 unique departments in the dataset.
@@ -264,7 +269,16 @@ _(Data Pending)_
 - Department with the least product distribution: Bulk (38 products)
 
 ### 4. Top 10 Products with the Highest Reorder Rates
-_(Data Pending)_
+- Banana - 12,461
+- Bag of Organic Bananas - 10,053
+- Organic Strawberries - 6,506
+- Organic Baby Spinach - 6,120
+- Organic Avocado - 4,705
+- Organic Hass Avocado - 4,536
+- Large Lemon - 4,473
+- Strawberries - 3,635
+- Organic Raspberries - 3,261
+- Limes - 3,255
 
 ### 5. Unique Users Who Placed Orders
 - There are 63,100 unique users who have placed orders in the dataset.
@@ -281,7 +295,17 @@ _(Data Pending)_
 - Lowest number of orders: Day 6 (138,060 orders)
 
 ### 9. Top 10 Most Ordered Products
-_(Data Pending)_
+- Banana - 14,136
+- Bag of Organic Bananas - 11,639
+- Organic Strawberries - 8,233
+- Organic Baby Spinach - 7,443
+- Large Lemon - 6,148
+- Organic Avocado - 5,606
+- Organic Hass Avocado - 5,489
+- Strawberries - 4,920
+- Limes - 4,609
+- Organic Raspberries - 4,200
+
 
 ### 10. Users Who Have Placed Orders in Each Department
 - Department ID: 4
@@ -301,20 +325,58 @@ _(Data Pending)_
 - Highest number of orders in an hour: 28,199
 
 ### 15. Distribution of Order Sizes (Number of Products per Order)
-_(Data Pending)_
+- 1 - 5,211
+- 2 - 5,591
+- 3 - 6,114
+- 4 - 6,249
+- 5 - 6,791
+- 6 - 6,632
+- 7 - 6,451
+- 8 - 6,074
+
 
 ### 16. Average Reorder Rate for Products in Each Aisle
-- Highest average reorder rate: _(Data Pending)_
+- Highest average reorder rate: Spices Seasonings - 0.1647
+  - Baking Supplies Decor - 0.1796
+  - Kitchen Supplies - 0.1802
+  - Cold Flu Allergy - 0.2181
+  - First Aid - 0.2254
+  - Beauty - 0.2315
+  - Baby Bath Body Care - 0.2571
+  - Food Storage - 0.2637
+  - Hair Care - 0.2639
+  - Eye Ear Care - 0.2662
+  - Deodorants - 0.2695
 
 ### 17. Average Order Size Variation by Day of the Week
 - Highest average order size: 11.7208 on Day 0
 - Lowest average order size: 9.6679 on Day 3
 
 ### 18. Top 10 Users with the Highest Number of Orders
-_(Data Pending)_
+| User ID | Total Orders |
+|---------|--------------|
+| 1024    | 100          |
+| 51072   | 100          |
+| 46087   | 100          |
+| 63073   | 100          |
+| 60040   | 100          |
+| 38683   | 100          |
+| 45938   | 100          |
+| 29623   | 100          |
+| 42307   | 100          |
+| 10934   | 100          |
 
 ### 19. Number of Products Belonging to Each Aisle and Department
-_(Data Pending)_
+| Department                | Aisle                  | Product Count |
+|---------------------------|------------------------|--------------|
+| Prepared Soups Salads     | Deli                   | 145          |
+| Specialty Cheeses         | Dairy Eggs             | 268          |
+| Energy Granola Bars       | Snacks                 | 826          |
+| Instant Foods            | Dry Goods Pasta         | 539          |
+| Marinades Meat Preparation | Pantry                | 405          |
+| Other                    | Other                   | 543          |
+| Packaged Meat            | Meat Seafood            | 100          |
+| Bakery Desserts          | Bakery                  | 297          |
 
 ### 20. Customer Purchasing Behavior and Product Performance Analysis
 #### Popular Purchase Times
