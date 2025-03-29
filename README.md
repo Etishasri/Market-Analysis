@@ -241,3 +241,88 @@ order by a.aisle_id, d.department_id;
 - `product_name`: Name of the product.
 - `aisle_id`: Identifier for the aisle the product belongs to. (Primary Key)
 - `department_id`: Identifier for the department the product belongs to.
+
+# Market Analysis
+
+## Project Information
+- Project Team ID: PTID-CDA-FEB-25-346
+- Created by: Etisha Srivastava, DataMites
+- Project ID: CDACL-006
+
+---
+
+## Insights
+
+### 1. Top 10 Aisles with the Highest Number of Products
+_(Data Pending)_
+
+### 2. Unique Departments in the Dataset
+- There are 21 unique departments in the dataset.
+
+### 3. Distribution of Products Across Departments
+- Department with the highest product distribution: Personal Care (6,524 products)
+- Department with the least product distribution: Bulk (38 products)
+
+### 4. Top 10 Products with the Highest Reorder Rates
+_(Data Pending)_
+
+### 5. Unique Users Who Placed Orders
+- There are 63,100 unique users who have placed orders in the dataset.
+
+### 6. Average Number of Days Between Orders for Each User
+- Users with a low average_no_of_days likely place orders more frequently.
+- Users with a high average_no_of_days might order less frequently.
+
+### 7. Peak Hours of Order Placement During the Day
+- The peak order hours are 10, 11, 14, and 15.
+
+### 8. Order Volume Variation by Day of the Week
+- Highest number of orders: Day 0 (183,939 orders)
+- Lowest number of orders: Day 6 (138,060 orders)
+
+### 9. Top 10 Most Ordered Products
+_(Data Pending)_
+
+### 10. Users Who Have Placed Orders in Each Department
+- Department ID: 4
+- Department Name: Produce
+- Highest User Count: 22,303
+
+### 11. Average Number of Products Per Order
+- The average number of products per order is 10.5306.
+
+### 12. Products Reordered More Than Once
+- There are 0 products that have been reordered more than once.
+
+### 13. Average Number of Products Added to the Cart Per Order
+- The average number of products added to the cart per order is 10.5306.
+
+### 14. Number of Orders by Hour of the Day
+- Highest number of orders in an hour: 28,199
+
+### 15. Distribution of Order Sizes (Number of Products per Order)
+_(Data Pending)_
+
+### 16. Average Reorder Rate for Products in Each Aisle
+- Highest average reorder rate: _(Data Pending)_
+
+### 17. Average Order Size Variation by Day of the Week
+- Highest average order size: 11.7208 on Day 0
+- Lowest average order size: 9.6679 on Day 3
+
+### 18. Top 10 Users with the Highest Number of Orders
+_(Data Pending)_
+
+### 19. Number of Products Belonging to Each Aisle and Department
+_(Data Pending)_
+
+### 20. Customer Purchasing Behavior and Product Performance Analysis
+#### Popular Purchase Times
+- Peak purchasing hours: 10, 11, and 14
+
+#### Purchasing Frequency by User
+- The average number of days between orders is approximately 2-3 days.
+
+#### Day of the Week Analysis
+- Days with highest order volumes: Day 0 and Day 1
+
